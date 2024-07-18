@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/flatpickr.css';
+
+@import 'tailwindcss/utilities';
+.side-logo{
+    width: 90px;
+}
+ul,ol{
+    padding-left: 0px !important;
+}
+.sidebar-expanded{
+    text-decoration: none !important;
+} 
+ .quill .ql-container{
+    height: 200px;
+ }
+ a{
+    text-decoration: none !important;
+ }
