@@ -21,6 +21,17 @@ const shapeOptions = [
   { value: 'rectangle', label: 'Rectangle' },
 ];
 
+const metalOptions = [
+  { value: '18k', label: '18K' },
+  { value: '14k', label: '14K' },
+  { value: '10k', label: '10K' }, 
+];
+const coolectionOptions = [
+  { value: '18k', label: '18K' },
+  { value: '14k', label: '14K' },
+  { value: '10k', label: '10K' }, 
+];
+
 
 function DashboardCard06() {
   const chartData = {
@@ -87,13 +98,31 @@ function DashboardCard06() {
                   />
                 </div>
 
-                <label htmlFor="metal" className='p-0'>Metal</label>
-                <select id="metal" className="bg-gray-50 w-full border mb-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mt-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                  <option value="18KT" selected>18KT</option>
-                  <option value="14KT">14KT</option>
-                  <option value="10KT">10KT</option>
-                  <option value="925 Silver">925 Silver</option>
-                </select>
+                <div className='mb-3'>
+                  <label htmlFor="shapes">Metal</label>
+                  <Select
+                    id="shapes"
+                    defaultValue={[metalOptions[2], metalOptions[3]]}
+                    isMulti
+                    name="shapes"
+                    options={metalOptions}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                  />
+                </div>
+
+                <div className='mb-3'>
+                  <label htmlFor="shapes">Collection</label>
+                  <Select
+                    id="shapes"
+                    defaultValue={[coolectionOptions[2], coolectionOptions[3]]}
+                    isMulti
+                    name="shapes"
+                    options={coolectionOptions}
+                    className="basic-multi-select"
+                    classNamePrefix="select"
+                  />
+                </div> 
 
                 <label htmlFor="weight" className='p-0'>Weight</label>
                 <select id="weight" className="bg-gray-50 w-full border mb-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mt-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -107,11 +136,11 @@ function DashboardCard06() {
                   <option value="Variant2">Variant2</option>
                 </select>
 
-                <label htmlFor="collection" className='p-0'>Collection</label>
+                {/* <label htmlFor="collection" className='p-0'>Collection</label>
                 <select id="collection" className="bg-gray-50 w-full border mb-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block mt-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                   <option value="Collection1" selected>Collection1</option>
                   <option value="Collection2">Collection2</option>
-                </select>
+                </select> */}
               </div>
             </form>
           </div>
