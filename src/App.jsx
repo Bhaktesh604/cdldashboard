@@ -21,6 +21,10 @@ import Createnewadmin from './partials/createnewadmin';
 import Advancepayment from './partials/dashboard/advancepayment/addpayment';
 import GooglemeetHistory from './partials/dashboard/MeetHistoryTable/googlemeethistory';
 import Creategooglemeet from './partials/dashboard/creategooglemeet/creategooglemeet';
+import Categories from './partials/dashboard/Category/Categories';
+import ProductListing from './partials/dashboard/ProductListing/ProductListing';
+import ProductForm from './partials/dashboard/ProductForm';
+ 
 
 function App() {
 
@@ -43,17 +47,15 @@ function App() {
           <div className="px-4 py-4">
             <Routes>
               <Route exact path="/" element={<Dashboard />} />
-              <Route exact path="/listing" element={
-                <div className="grid grid-cols-12 gap-6">
-                  <DashboardCard07 />
-                  <DashboardCard06 />
-                </div>
-              } />
+              <Route exact path="/listing" element={<DashboardCard07 />} /> 
               <Route exact path="/customer" element={<CustomerList />} />
               <Route exact path="/createnewadmin" element={<Createnewadmin />} />
               <Route exact path="/advancepayment" element={<Advancepayment />} />
               <Route exact path="/googlemeetHistory" element={<GooglemeetHistory />} />
-              <Route exact path="/newgooglemeet" element={<Creategooglemeet />} />
+              <Route exact path="/newgooglemeet" element={<Creategooglemeet />} /> 
+              <Route exact path="/categories" element={<Categories />} /> 
+              <Route exact path="/productlisting" element={<ProductListing />} /> 
+              <Route exact path="/stonetype" element={<ProductForm />} /> 
             </Routes>
           </div>
         </div>
